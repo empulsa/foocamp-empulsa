@@ -10,7 +10,7 @@ export default async function getPageData(pageSlug) {
 
   const targetPage = response.items.find((page) => page.fields.slug === pageSlug);
 
-  const pageData = await client.getEntry(targetPage.sys.id);
+  const pageData = await client.getEntry(targetPage.sys.id, { include: 2 });
 
   return pageData;
 }
