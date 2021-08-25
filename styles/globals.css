@@ -1,5 +1,94 @@
-@import url("http://fonts.cdnfonts.com/css/museo-slab");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
+
+.relevantCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.relevantInfocard {
+  color: white;
+  max-width: 300px;
+  min-height: 230px;
+  text-align: center;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .relevantInfocard {
+    margin-bottom: 0;
+  }
+}
+
+.relevantInfocard__icon {
+  width: 50px;
+}
+
+.relevantInfocard__title {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.relevantInfocard__info {
+  font-size: 0.8em;
+}
+
+.navBar {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+
+.navBar__link {
+  color: #414f5c;
+  font-size: 0.7em;
+  text-decoration: none;
+}
+
+.navBar__logo {
+  margin-right: 100px;
+}
+
+.navBar__button {
+  background-color: #0f4c5c;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  padding: 13px 16px;
+  border-radius: 48px;
+  font-size: 0.7em;
+}
 
 body {
   margin: 0;
@@ -34,7 +123,6 @@ h6 {
 h1 {
   font-size: 50px;
   font-weight: 700;
-  font-weight: bold;
   line-height: 55px;
 }
 
@@ -100,100 +188,4 @@ footer {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.relevantCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-}
-
-.relevantCards a {
-  text-decoration: none;
-}
-
-.relevantInfocard {
-  color: white;
-  max-width: 300px;
-  min-height: 230px;
-  text-align: center;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-@media (max-width: 770px) {
-  .relevantInfocard {
-    margin-bottom: 30px;
-  }
-}
-
-.relevantInfocard__icon {
-  width: 50px;
-}
-
-.relevantInfocard__title {
-  font-size: 1em;
-  margin-bottom: 0;
-}
-
-.relevantInfocard__info {
-  font-size: 0.8em;
-}
-
-.navBar {
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  height: 100px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 10px 0 10px;
-}
-
-.navBar a {
-  text-decoration: none;
-}
-
-.navBar__link {
-  color: #414f5c;
-  font-size: 0.7em;
-}
-
-.navBar__logo {
-  margin-right: 100px;
-}
-
-.navBar__button {
-  background-color: #0f4c5c;
-  color: white;
-  font-weight: bold;
-  border: 0;
-  padding: 13px 16px;
-  border-radius: 48px;
-  font-size: 0.7em;
 }

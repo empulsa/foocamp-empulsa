@@ -9,8 +9,8 @@ export default function Navigation({ fields }) {
       </Link>
 
       {fields.navItems.map((link) => (
-        <Link key={link.sys.id} href="/">
-          <a href="/" className="navBar__link">{link.fields.linkText}</a>
+        <Link key={link.sys.id} href={`/${link.fields.linkText}`}>
+          <a href={`/${link.fields.linkText}`} className="navBar__link">{link.fields.linkText}</a>
         </Link>
       ))}
       <Link href={fields.mainCtaTargetUrl}>

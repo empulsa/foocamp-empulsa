@@ -3,7 +3,7 @@ import RelevantInfoCards from '../components/RelevantInfoCards/RelevantInfoCards
 import Navigation from '../components/Navigation/Navigation';
 
 export const getServerSideProps = async () => {
-  const pageData = await getPageData('/juli');
+  const pageData = await getPageData('/');
 
   return {
     props: {

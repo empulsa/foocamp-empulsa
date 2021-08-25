@@ -9,13 +9,10 @@ $dark-blue-color: #414f5c;
   justify-content: space-between;
   padding: 0 10px 0 10px;
 
-  a {
-    text-decoration: none;
-  }
-
   &__link {
     color: $dark-blue-color;
     font-size: 0.7em;
+    text-decoration: none;
   }
 
   &__logo {

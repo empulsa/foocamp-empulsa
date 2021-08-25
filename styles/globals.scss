@@ -1,7 +1,4 @@
-@import url("http://fonts.cdnfonts.com/css/museo-slab");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
-@import "../components/RelevantInfoCards/RelevantInfoCards";
-@import "../components/Navigation/Navigation";
 
 //Typography
 $body-font: "Open Sans", sans-serif;
@@ -17,6 +14,9 @@ $white: #fff;
 $breakpoint-web: 1024px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 480px;
+
+@import "../components/RelevantInfoCards/RelevantInfoCards";
+@import "../components/Navigation/Navigation";
 
 body {
   margin: 0;
