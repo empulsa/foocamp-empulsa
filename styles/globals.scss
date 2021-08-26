@@ -1,8 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
+
+//Typography
+$body-font: "Open Sans", sans-serif;
+$headings: "Museo Slab", sans-serif;
+//Colors
+$blue-primary1: #0f4c5c;
+$orange-primary2: #e36414;
+$yellow-secondary1: #fc8c17;
+$purple-secondary2: #5f0f40;
+$beige-tertiary: #ffebd6;
+$white: #fff;
+//Responsive breakpoints
+$breakpoint-web: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+@import "../components/RelevantInfoCards/RelevantInfoCards";
+@import "../components/Navigation/Navigation";
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
 }
 
@@ -10,6 +28,38 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headings;
+}
+
+p,
+h5,
+h6 {
+  font-family: $body-font;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 55px;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 50px;
+}
+
+h3,
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 23px;
 }
 
 header {

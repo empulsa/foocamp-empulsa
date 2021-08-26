@@ -13,12 +13,10 @@
   },
   "lint-staged": {
     "*.js": [
-      "npx eslint . --fix",
-      "git add"
+      "npx eslint . --fix"
     ],
     "*.{css,scss}": [
-      "npx stylelint --fix",
-      "git add"
+      "npx stylelint --fix"
     ]
   },
   "dependencies": {
