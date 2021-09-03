@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: $body-font, sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.layout {
+  min-height: 100vh;
+
+  main section {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    width: 100%;
+
+    .section-content {
+      max-width: 1200px;
+    }
+  }
+}
