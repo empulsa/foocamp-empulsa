@@ -18,7 +18,7 @@ Please keep in mind the following when creating a new component for the project:
 
 * The component's template file (the JS file with the JSX) must be placed inside the **_components_** folder located at the root of the project.
 
-!(https://raw.githubusercontent.com/FooCamp/foocamp-empulsa/add-dev-docs/devDocs/img/component-template-file.png)
+!(/add-dev-docs/devDocs/img/component-template-file.png?raw=true)
 
 * The component's *SCSS* file must be placed inside the **_components_** folder located within **_styles_** folder. Remember to make the `@import` of the file in the *main.scss* file.
 
