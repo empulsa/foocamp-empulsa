@@ -1,0 +1,41 @@
+.sectionDivider {
+  --background-color: #fff;
+  --svg-fill-color: #fff;
+
+  $divider-heigth: 30px;
+  $divider-heigth-md: 60px;
+
+  background-color: var(--background-color);
+  height: $divider-heigth;
+  position: relative;
+
+  @media (min-width: #{$breakpoint-md}) {
+    height: $divider-heigth-md;
+  }
+
+  &--flat-top {
+    margin-bottom: -#{$divider-heigth};
+
+    @media (min-width: #{$breakpoint-md}) {
+      margin-bottom: -#{$divider-heigth-md};
+    }
+  }
+
+  &--flat-bottom {
+    margin-top: -#{$divider-heigth};
+
+    @media (min-width: #{$breakpoint-md}) {
+      margin-top: -#{$divider-heigth-md};
+    }
+  }
+
+  svg {
+    fill: var(--svg-fill-color);
+    height: $divider-heigth;
+    width: 100%;
+
+    @media (min-width: #{$breakpoint-md}) {
+      height: $divider-heigth-md;
+    }
+  }
+}

@@ -13,8 +13,17 @@ body * {
   main section {
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 60px 20px;
     width: 100%;
+
+    @media (min-width: #{$breakpoint-md}) {
+      padding: 80px 30px;
+    }
+
+    @media (min-width: #{$breakpoint-lg}) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
     .section-content {
       max-width: 1200px;
