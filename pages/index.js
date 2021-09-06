@@ -1,9 +1,9 @@
 import getPageData from '../utils/api';
-import RelevantInfoCards from '../components/RelevantInfoCards/RelevantInfoCards';
+import ImageInfoItems from '../components/ImageInfoItems/ImageInfoItems';
 import Navigation from '../components/Navigation/Navigation';
 
 export const getServerSideProps = async () => {
-  const pageData = await getPageData('/');
+  const pageData = await getPageData('juli');
 
   return {
     props: {
@@ -15,7 +15,7 @@ export const getServerSideProps = async () => {
 
 const AvailableComponents = {
   mainNavbar: Navigation,
-  relevantInfoCards: RelevantInfoCards,
+  imageInfoItemsSection: ImageInfoItems,
 };
 
 const returnComponent = (component) => {
