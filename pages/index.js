@@ -1,37 +1,15 @@
-import getPageData from '../utils/api';
-import ImageInfoItems from '../components/ImageInfoItems/ImageInfoItems';
-import Navigation from '../components/Navigation/Navigation';
+import Index from './[slug]';
+import { getPageData } from '../utils/api';
 
-export const getServerSideProps = async () => {
-  const pageData = await getPageData('juli');
-
+export const getStaticProps = async () => {
+  const slug = 'home';
+  const pageData = await getPageData(slug);
   return {
     props: {
-      data: pageData,
       components: pageData.fields.components,
+      slug,
     },
   };
 };
 
-const AvailableComponents = {
-  mainNavbar: Navigation,
-  imageInfoItemsSection: ImageInfoItems,
-};
-
-const returnComponent = (component) => {
-  const componentType = component.sys.contentType.sys.id;
-  const { id } = component.sys;
-  const TargetComponent = AvailableComponents[componentType];
-  return TargetComponent ? <TargetComponent {...component} key={id} />
-    : 'No Component';
-};
-
-export default function Recipes({ components }) {
-  return (
-    <div className="home">
-      {components.map((component) => (
-        returnComponent(component)
-      ))}
-    </div>
-  );
-}
+export default Index;

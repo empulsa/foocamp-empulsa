@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: $body-font, sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.layout {
+  min-height: 100vh;
+
+  main section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    width: 100%;
+
+    @media (min-width: #{$breakpoint-md}) {
+      padding: 80px 30px;
+    }
+
+    @media (min-width: #{$breakpoint-lg}) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .section-content {
+      max-width: 1200px;
+    }
+  }
+}
