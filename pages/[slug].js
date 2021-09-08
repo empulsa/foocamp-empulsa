@@ -1,5 +1,5 @@
 import { getPageData, getPages } from '../utils/api';
-import RelevantInfoCards from '../components/RelevantInfoCards';
+import ImageInfoItem from '../components/ImageInfoItem';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 
@@ -23,7 +23,7 @@ export const getStaticProps = async ({ params }) => {
 
 const AvailableComponents = {
   // mainNavbar: Navigation,
-  relevantInfoCards: RelevantInfoCards,
+  imageInfoItemsSection: ImageInfoItem,
 };
 
 export default function Recipes({ components, slug }) {
