@@ -23,7 +23,7 @@ export default function ImageInfoItemsSection({ fields }) {
           <img className="image-info-item__icon" src={item.fields.image.fields.file.url} alt="" />
         </div>
         <div className="image-info-item__info-wrapper">
-          <h3 className={`image-info-item__title${item.fields.applyBackgroundColorToTitle}` ? 'image-info-item__title image-info-item__title--colored' : ''}>{item.fields.title}</h3>
+          <h3 className={`image-info-item__title ${item.fields.applyBackgroundColorToTitle ? 'image-info-item__title--colored' : ''}`}>{item.fields.title}</h3>
           <p className="image-info-item__info">{item.fields.shortText}</p>
         </div>
       </div>
