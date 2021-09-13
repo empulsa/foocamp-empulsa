@@ -1,0 +1,71 @@
+.linksWithIconSection {
+  .boost {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      @media (min-width: $breakpoint-lg) {
+        justify-content: center;
+        gap: 40px;
+        width: 100vw;
+      }
+    }
+
+    &__item {
+      text-align: center;
+      flex: 0 0 50%;
+      margin-bottom: 61px;
+      transition: 0.25s all;
+
+      @media (min-width: $breakpoint-md) {
+        flex-basis: 33%;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        flex-basis: 160px;
+      }
+
+      &__link {
+        text-decoration: none;
+        // &:hover {
+        //   .boost__item__img {
+        //     background-color: $orange-primary2;
+        //   }
+        // }
+      }
+
+      &__img {
+        width: 70px;
+        height: 70px;
+        background-color: $yellow-secondary1;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__text {
+        text-align: center;
+        margin: 21px auto 0 auto;
+        max-width: 160px;
+      }
+    }
+
+    &__text {
+      max-width: 730px;
+
+      @media (min-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+  }
+}
