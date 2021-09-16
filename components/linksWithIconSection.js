@@ -10,7 +10,7 @@ export default function linksWithIconSection({ fields }) {
   } = fields;
   const getSectionHeadlines = (colorText) => {
     const getSectionTitle = Object.prototype.hasOwnProperty.call(fields, 'title') ? <h2 className="linksWithIconSection__title" style={colorText}>{title}</h2> : false;
-    const getSectionText = Object.prototype.hasOwnProperty.call(fields, 'text') ? <p className="linksWithIconSection__text" style={colorText}>{documentToReactComponents(text)}</p> : false;
+    const getSectionText = Object.prototype.hasOwnProperty.call(fields, 'text') ? <div className="linksWithIconSection__text" style={colorText}>{documentToReactComponents(text)}</div> : false;
 
     return (
       <>
