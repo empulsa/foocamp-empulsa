@@ -2,6 +2,7 @@ import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
+import FooterSection from '../components/FooterSection';
 
 export const getStaticPaths = async () => {
   const paths = await getPages();
@@ -24,6 +25,7 @@ export const getStaticProps = async ({ params }) => {
 const AvailableComponents = {
   // mainNavbar: Navigation,
   imageInfoItemsSection: ImageInfoItemsSection,
+  footerSection: FooterSection,
 };
 
 export default function Recipes({ components, slug }) {
