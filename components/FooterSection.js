@@ -1,15 +1,17 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Link from 'next/link';
+import MainCta from './MainCta';
 
 export default function Footer({ fields }) {
+  const style = { '--shape-background-color': fields.matchBackgroundColor };
+
   return (
     <>
+      <div className="triangle-shape" style={style} />
       <div className="footerSection__img-wrapper">
         <img className="footerSection__icon" src={fields.logoImage.fields.image.fields.file.url} alt="" />
       </div>
-      <Link href={`/${fields.ctaButton.linkUrl}`}>
-        <button className="footerSection__cta-button" type="button">{fields.ctaButton.fields.linkLabel}</button>
-      </Link>
+      <MainCta fields={fields.ctaButton.fields} />
       <div className="footerSection__nav-links-wrapper">
         {fields.navlinks.map((link) => (
           <Link key={link.sys.id} href={`/${link.fields.linkUrl}`}>
