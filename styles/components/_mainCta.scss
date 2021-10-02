@@ -11,7 +11,13 @@
   line-height: 22px;
   font-family: $body-font;
 
-  :hover {
+  &__icon {
+    margin: 2px 10px 2px 2px;
+    vertical-align: sub;
+  }
+
+  &:hover {
     background-color: $orange-primary2;
+    cursor: pointer;
   }
 }
