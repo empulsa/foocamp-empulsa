@@ -4,6 +4,7 @@ import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 import FooterSection from '../components/FooterSection';
 import MainCta from '../components/MainCta';
+import HeroSection from '../components/HeroSection';
 
 export const getStaticPaths = async () => {
   const paths = await getPages();
@@ -25,6 +26,7 @@ export const getStaticProps = async ({ params }) => {
 
 const AvailableComponents = {
   // mainNavbar: Navigation,
+  heroSection: HeroSection,
   imageInfoItemsSection: ImageInfoItemsSection,
   footerSection: FooterSection,
   mainCta: MainCta,

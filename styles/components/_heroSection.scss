@@ -1,0 +1,12 @@
+.heroSection {
+  position: relative;
+
+  .layout main & {
+    padding: 0;
+  }
+
+  .layout main & > .section-content {
+    max-width: 100%;
+    width: 100%;
+  }
+}
