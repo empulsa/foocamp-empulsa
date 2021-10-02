@@ -1,8 +1,6 @@
 //Typography
-$body-font: "Open Sans",
-  sans-serif;
-$headings: "Zilla Slab",
-  sans-serif;
+$body-font: "Open Sans", sans-serif;
+$headings: "Zilla Slab", sans-serif;
 
 //Colors
 $blue-primary1: #0f4c5c;
@@ -17,3 +15,7 @@ $black: #000;
 $breakpoint-xl: 1440px;
 $breakpoint-lg: 1024px;
 $breakpoint-md: 600px;
+
+//Grid gap
+$gap-lg: 26px;
+$gap-md: 16px;
