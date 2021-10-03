@@ -1,4 +1,4 @@
-.empulsaCarousel {
+.swiper-container {
   .swiper-button-prev,
   .swiper-button-next {
     background-color: #fc8c17;
@@ -6,30 +6,32 @@
     padding: 10px 14px !important;
   }
 
-  .swiper {
-    width: 100%;
-    height: 100%;
+  .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
   }
 
+  .swiper-pagination-bullet-active {
+    background: #fc8c17;
+  }
+}
+
+.empulsaCarousel {
   .swiper-slide {
     text-align: center;
-    width: 500px;
-    height: 500px !important;
-    line-height: 300px;
+    width: 200px;
+    height: 400px;
+    line-height: 200px;
     display: flex;
+    background-color: green;
     justify-content: center;
     align-items: center;
-  }
-
-  .slideNextClass {
-    background-color: gray;
-    transform: scale(0.5);
+    transform: scale(0.8);
     opacity: 0.2;
   }
 
-  .slidePrevClass {
-    background-color: yellow;
-    transform: scale(0.5);
-    opacity: 0.2;
+  .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
   }
 }
