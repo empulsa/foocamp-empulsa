@@ -1,5 +1,6 @@
 import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
+import TextWithImageAndLinkOnSide from '../components/TextWithImageAndLinkOnSide';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 import HeroSection from '../components/HeroSection';
@@ -26,6 +27,7 @@ const AvailableComponents = {
   // mainNavbar: Navigation,
   heroSection: HeroSection,
   imageInfoItemsSection: ImageInfoItemsSection,
+  textWithImageAndLinkOnSide: TextWithImageAndLinkOnSide,
 };
 
 export default function Recipes({ components, slug }) {
