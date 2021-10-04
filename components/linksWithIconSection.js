@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-export default function linksWithIconSection({ fields }) {
+export default function LinksWithIconSection({ fields }) {
   const {
     title,
     text,
