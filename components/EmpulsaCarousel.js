@@ -1,4 +1,4 @@
-import { Swiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper/core';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
@@ -42,7 +42,13 @@ export default function EmpulsaCarousel({
       autoplay={autoplay}
       className={carouselClassName}
     >
-      {children}
+      {children.map((child, index) => (
+        <SwiperSlide
+          key={child.key ? child.key : `${carouselClassName}${index}`}
+        >
+          {child}
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

@@ -1,5 +1,4 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { SwiperSlide } from 'swiper/react';
 import EmpulsaCarousel from './EmpulsaCarousel';
 
 export default function ImageInfoItemsSection({ fields }) {
@@ -73,12 +72,12 @@ export default function ImageInfoItemsSection({ fields }) {
         slidesPerView={2}
         carouselClassName="empulsaCarousel"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        <div>Slide 1</div>
+        <div>Slide 2</div>
+        <div>Slide 6</div>
+        <div>Slide 3</div>
+        <div>Slide 4</div>
+        <div>Slide 5</div>
       </EmpulsaCarousel>
     </>
   );
