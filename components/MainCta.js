@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
 export default function MainCta({ fields }) {
+  console.log({ fields });
   return (
     <Link href={fields.linkUrl}>
-      <button className="main-cta" type="button">
+      <a target={fields.externalLink ? '_blank' : ''} href={fields.linkUrl} className="main-cta" rel="noreferrer">
         <img className="main-cta__icon" src={fields.icon.fields.file.url} width="20" height="18" alt="Heart icon" />
         {fields.linkLabel}
-      </button>
+      </a>
     </Link>
   );
 }
