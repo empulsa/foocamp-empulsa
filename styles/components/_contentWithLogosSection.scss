@@ -8,7 +8,12 @@
   }
 
   &__text-wrapper {
-    margin: 40px 0;
+    margin: 42px auto 44px;
+
+    @media (min-width: $breakpoint-lg) {
+      max-width: 590px;
+    }
+
   }
 
   &__brand {
