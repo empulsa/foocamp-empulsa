@@ -2,6 +2,7 @@ import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
+import FooterSection from '../components/FooterSection';
 import HeroSection from '../components/HeroSection';
 import ProcessSection from '../components/ProcessSection';
 
@@ -28,6 +29,7 @@ const AvailableComponents = {
   heroSection: HeroSection,
   imageInfoItemsSection: ImageInfoItemsSection,
   processSection: ProcessSection,
+  footerSection: FooterSection,
 };
 
 export default function Recipes({ components, slug }) {
