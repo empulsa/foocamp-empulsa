@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    row-gap: 40px;
   }
 
   &__item {
@@ -31,19 +32,22 @@
       justify-content: center;
       align-items: center;
       margin: 0 auto;
+      position: relative;
+
+      svg {
+        fill: var(--fill);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &:nth-child(4n + 4) {
       #{$item}__icon {
         height: 75px;
-      }
-    }
-
-    @for $i from 1 through 4 {
-      &:nth-child(4n + #{$i}) {
-        #{$item}__icon {
-          background: url('../../assets/images/step#{$i}.svg') no-repeat 0 0/contain;
-        }
       }
     }
 
