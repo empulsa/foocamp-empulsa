@@ -1,6 +1,5 @@
 export default function ProcessSection({ fields }) {
   const { steps } = fields;
-  console.log(steps);
   const getSectionHeadlines = () => {
     const getSectionTitle = Object.prototype.hasOwnProperty.call(fields, 'title') ? <h2 className="processSection__title">{fields.title}</h2> : false;
 
