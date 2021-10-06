@@ -3,6 +3,8 @@ import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
 import LinksWithIconSection from '../components/LinksWithIconSection';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
+import FooterSection from '../components/FooterSection';
+import HeroSection from '../components/HeroSection';
 
 export const getStaticPaths = async () => {
   const paths = await getPages();
@@ -24,8 +26,10 @@ export const getStaticProps = async ({ params }) => {
 
 const AvailableComponents = {
   // mainNavbar: Navigation,
+  heroSection: HeroSection,
   imageInfoItemsSection: ImageInfoItemsSection,
   linksWithIconSection: LinksWithIconSection,
+  footerSection: FooterSection,
 };
 
 export default function Recipes({ components, slug }) {
