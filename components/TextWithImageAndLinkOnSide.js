@@ -21,9 +21,9 @@ export default function TextWithImageAndLinkOnSide({ fields }) {
     return (
       <li className="textWithImageAndLinkOnSide__item" key={item.sys.id} style={style}>
         <img className="textWithImageAndLinkOnSide__item__img" src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title} />
-        <Link href={item.fields.link.fields.linkUrl} target={item.fields.link.fields.externalLink ? '_blank' : ''}>
+        <Link href={item.fields.link.fields.linkUrl}>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a className="textWithImageAndLinkOnSide__item__btn">
+          <a className="textWithImageAndLinkOnSide__item__btn" target={item.fields.link.fields.externalLink ? '_blank' : ''}>
             <p className="textWithImageAndLinkOnSide__item__text">{item.fields.link.fields.linkLabel}</p>
           </a>
         </Link>
