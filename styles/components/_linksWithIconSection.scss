@@ -35,6 +35,8 @@
   }
 
   &__item {
+    $item: &;
+
     text-align: center;
     flex: 0 0 50%;
     margin-bottom: 61px;
@@ -55,7 +57,9 @@
       align-items: center;
 
       &:hover {
-        background-color: $orange-primary2;
+        #{$item}__img {
+          background-color: $orange-primary2;
+        }
       }
     }
 
