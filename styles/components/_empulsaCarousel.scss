@@ -2,13 +2,14 @@
   .swiper-button-prev,
   .swiper-button-next {
     background-color: #fc8c17;
-    border-radius: 40px !important;
-    padding: 10px 14px !important;
+    border-radius: 40px;
+    padding: 10px 14px;
   }
 
   .swiper-pagination-bullet {
     background: #fff;
     opacity: 1;
+    border: 1px solid #fc8c17;
   }
 
   .swiper-pagination-bullet-active {

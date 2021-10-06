@@ -1,5 +1,4 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import EmpulsaCarousel from './EmpulsaCarousel';
 
 export default function ImageInfoItemsSection({ fields }) {
   const { infoItems } = fields;
@@ -65,20 +64,6 @@ export default function ImageInfoItemsSection({ fields }) {
       <div className="imageInfoItemsSection__items-container">
         {infoItems.map((item) => renderImageInfoItem(item))}
       </div>
-      <EmpulsaCarousel
-        navigation
-        pagination
-        spaceBetween={10}
-        slidesPerView={2}
-        carouselClassName="empulsaCarousel"
-      >
-        <div>Slide 1</div>
-        <div>Slide 2</div>
-        <div>Slide 6</div>
-        <div>Slide 3</div>
-        <div>Slide 4</div>
-        <div>Slide 5</div>
-      </EmpulsaCarousel>
     </>
   );
 }

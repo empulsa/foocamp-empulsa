@@ -9,6 +9,7 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
 export default function EmpulsaCarousel({
   navigation = false,
   pagination = false,
+  centeredSlides = false,
   autoplay = false,
   spaceBetween = 0,
   slidesPerView = 1,
@@ -22,7 +23,7 @@ export default function EmpulsaCarousel({
       speed={800}
       slidesPerView={slidesPerView}
       slidesPerGroup={slidesPerGroup}
-      centeredSlides
+      centeredSlides={centeredSlides}
       centerInsufficientSlides
       spaceBetween={spaceBetween}
       loop={loop}
