@@ -16,7 +16,6 @@ export default function ImageInfoItemsSection({ fields }) {
 
   const renderImageInfoItem = (item) => {
     const style = { '--background-color': item.fields.imgBackgroundColor };
-
     return (
       <div className="image-info-item" key={item.sys.id} style={style}>
         <div className="image-info-item__icon-wrapper">
@@ -37,5 +36,6 @@ export default function ImageInfoItemsSection({ fields }) {
         {infoItems.map((item) => renderImageInfoItem(item))}
       </div>
     </>
+
   );
 }

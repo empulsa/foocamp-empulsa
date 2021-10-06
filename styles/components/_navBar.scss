@@ -1,31 +1,88 @@
-$dark-blue-color: #414f5c;
+.mainNavbar__ul,
+.mainNavbar__subUl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
 
-.navBar {
-  width: 100%;
-  position: sticky;
-  height: 100px;
+.mainNavbar__li a,
+.mainNavbar__subLi a {
   display: inline-flex;
+  height: 60px;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 10px 0 10px;
+  justify-content: center;
+  color: $black;
+  text-decoration: none;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: 600;
+}
 
-  &__link {
-    color: $dark-blue-color;
-    font-size: 0.7em;
-    text-decoration: none;
+.mainNavbar__subLi {
+  height: 0;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.mainNavbar__li:hover .mainNavbar__subLi,
+.mainNavbar__li a:active .mainNavbar__subLi {
+  height: 60px;
+  opacity: 1;
+  transition: all 0.25s ease-in-out;
+}
+
+.mainNavbar__li a:hover,
+.mainNavbar__subLi a:hover {
+  background-color: #f5f5f5;
+  color: $orange-primary2;
+}
+
+.arrow::after {
+  content: ">";
+  font-weight: 900;
+  margin-left: 20px;
+  margin-top: 2px;
+  transform: rotateZ(90deg);
+}
+
+.mainNavbar__li:hover .arrow::after {
+  transform: rotateZ(270deg);
+}
+
+.mainNavbar .section-content {
+  width: 100%;
+  padding: 0;
+
+  .mainNavbar__img {
+    margin-left: calc(100% - 110px);
   }
+}
 
-  &__logo {
-    margin-right: 100px;
-  }
+@media (min-width: $breakpoint-md) {
+  .mainNavbar .section-content {
+    display: flex;
+    justify-content: space-between;
 
-  &__button {
-    background-color: $blue-primary1;
-    color: white;
-    font-weight: bold;
-    border: 0;
-    padding: 13px 16px;
-    border-radius: 48px;
-    font-size: 0.7em;
+    .mainNavbar__img {
+      margin-left: 0;
+    }
+
+    .mainNavbar__ul {
+      display: flex;
+    }
+
+    .mainNavbar__li a,
+    .mainNavbar__subLi a {
+      padding: 0 20px;
+    }
+
+    .mainNavbar__li:hover .mainNavbar__subUl {
+      background-color: $white;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
   }
 }

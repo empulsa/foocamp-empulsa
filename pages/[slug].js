@@ -2,6 +2,7 @@ import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
+import NavegationMain from '../components/Navigation';
 
 export const getStaticPaths = async () => {
   const paths = await getPages();
@@ -22,7 +23,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const AvailableComponents = {
-  // mainNavbar: Navigation,
+  mainNavbar: NavegationMain,
   imageInfoItemsSection: ImageInfoItemsSection,
 };
 
@@ -56,7 +57,9 @@ export default function Recipes({ components, slug }) {
     <main className={slug}>
       {components.map((component) => {
         const componentType = getComponentType(component);
-
+        /* console.log(component);
+        console.log(componentType);
+        console.log('...........................'); */
         if (componentType === 'sectionDivider') {
           return <SectionDivider {...component} key={getComponentId()} />;
         }
