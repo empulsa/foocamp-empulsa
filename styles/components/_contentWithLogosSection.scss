@@ -1,0 +1,30 @@
+.contentWithLogosSection {
+  @media (min-width: $breakpoint-lg) {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__text-wrapper {
+    margin: 40px 0;
+  }
+
+  &__brand {
+    max-height: 100px;
+    max-width: 150px;
+    margin: 10px;
+  }
+
+  & .swiper-container {
+    max-width: calc(100vw - #{2*$gap-lg});
+  }
+
+  & .swiper-slide {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

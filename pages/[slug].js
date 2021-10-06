@@ -3,6 +3,7 @@ import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 import HeroSection from '../components/HeroSection';
+import ContentWithLogosSection from '../components/ContentWithLogosSection';
 
 export const getStaticPaths = async () => {
   const paths = await getPages();
@@ -25,6 +26,7 @@ export const getStaticProps = async ({ params }) => {
 const AvailableComponents = {
   // mainNavbar: Navigation,
   heroSection: HeroSection,
+  contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
 };
 
