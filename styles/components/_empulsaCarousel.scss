@@ -1,0 +1,38 @@
+.swiper-container {
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: #fc8c17;
+    border-radius: 40px;
+    padding: 10px 14px;
+  }
+
+  .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+    border: 1px solid #fc8c17;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #fc8c17;
+  }
+}
+
+.empulsaCarousel {
+  .swiper-slide {
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    line-height: 200px;
+    display: flex;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
