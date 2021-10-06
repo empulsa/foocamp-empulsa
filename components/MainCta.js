@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 export default function MainCta({ fields }) {
-  console.log({ fields });
   return (
     <Link href={fields.linkUrl}>
       <a target={fields.externalLink ? '_blank' : ''} href={fields.linkUrl} className="main-cta" rel="noreferrer">
