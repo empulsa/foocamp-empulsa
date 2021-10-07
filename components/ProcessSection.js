@@ -30,7 +30,7 @@ export default function ProcessSection({ fields }) {
     return (
       <li className="processSection__item" key={item.sys.id}>
         <div className="processSection__item__icon">
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: colorSvg(count) }} style={styleSvg} />
           <img className="processSection__item__image" src={item.fields.icon.fields.file.url} alt={item.fields.icon.fields.title} />
         </div>

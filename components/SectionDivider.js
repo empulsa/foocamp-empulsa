@@ -17,6 +17,7 @@ const SectionDivider = ({ fields }) => {
   return (
     <div
       className={`sectionDivider sectionDivider--flat-${flatClass}`}
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: svgCode }}
       style={styles}
     />

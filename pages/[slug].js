@@ -3,6 +3,7 @@ import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
 import LinksWithIconSection from '../components/LinksWithIconSection';
 import TextWithImageAndLinkOnSide from '../components/TextWithImageAndLinkOnSide';
 import ComponentNotFound from '../components/ComponentNotFound';
+import QuotesSection from '../components/QuotesSection';
 import SectionDivider from '../components/SectionDivider';
 import FooterSection from '../components/FooterSection';
 import HeroSection from '../components/HeroSection';
@@ -34,6 +35,7 @@ const AvailableComponents = {
   heroSection: HeroSection,
   contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
+  quotesSection: QuotesSection,
   processSection: ProcessSection,
   linksWithIconSection: LinksWithIconSection,
   textWithImageAndLinkOnSide: TextWithImageAndLinkOnSide,
