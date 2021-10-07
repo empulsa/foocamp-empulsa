@@ -1,5 +1,6 @@
 import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
+import LinksWithIconSection from '../components/LinksWithIconSection';
 import TextWithImageAndLinkOnSide from '../components/TextWithImageAndLinkOnSide';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
@@ -30,6 +31,7 @@ const AvailableComponents = {
   heroSection: HeroSection,
   contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
+  linksWithIconSection: LinksWithIconSection,
   textWithImageAndLinkOnSide: TextWithImageAndLinkOnSide,
   footerSection: FooterSection,
 };
