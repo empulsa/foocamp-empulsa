@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import EmpulsaCarousel from './EmpulsaCarousel';
 
 export default function ContentWithCarouselSection({ fields }) {
   const { carouselImages } = fields;
@@ -22,11 +23,20 @@ export default function ContentWithCarouselSection({ fields }) {
         <button className="contentWithCarouselSection__button" type="button">Saber más</button>
       </div>
       <div className="contentWithCarouselSection__carousel-container">
-        {carouselImages.map((image) => (
-          <div className="contentWithCarouselSection__img-wrapper" key={image.sys.id}>
-            <img className="contentWithCarouselSection__img" src={image.fields.file.url} alt="carousel" />
-          </div>
-        ))}
+        <EmpulsaCarousel
+          navigation
+          loop
+          slidesPerViewMobile={2}
+          spaceBetweenMobile={150}
+          slidesPerView={2}
+          carouselClassName="carouselImages"
+        >
+          {carouselImages.map((image) => (
+            <div className="contentWithCarouselSection__img-wrapper" key={image.sys.id}>
+              <img className="contentWithCarouselSection__img" src={image.fields.file.url} alt="carousel" />
+            </div>
+          ))}
+        </EmpulsaCarousel>
       </div>
     </>
   );

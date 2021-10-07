@@ -2,7 +2,18 @@
   .section-content {
     @media (min-width: $breakpoint-md) {
       display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
+  }
+
+  .layout main & {
+    padding-right: 0;
+  }
+
+  .layout main & > .section-content {
+    max-width: 100%;
+    width: 100%;
   }
 
   &__info-container {
@@ -35,15 +46,44 @@
 
   &__carousel-container {
     margin-top: 40px;
-    height: 540px;
+    height: 100%;
+    margin-left: 0;
+    width: 98%;
+
+    @media (min-width: $breakpoint-md) {
+      width: 50%;
+      margin-left: 85px;
+    }
   }
 
   &__img-wrapper {
-    min-width: 290px;
+    min-width: 240px;
+    max-width: 600px;
   }
 
   &__img {
     border-radius: 32px;
     width: 100%;
+  }
+
+  .carouselImages {
+    .swiper-slide {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+
+      @media (min-width: $breakpoint-md) {
+        display: flex;
+      }
+    }
   }
 }
