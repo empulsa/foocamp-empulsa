@@ -36,11 +36,7 @@ export default function ImageInfoItemsSection({ fields }) {
     return (
       <div className="image-info-item" key={item.sys.id} style={style}>
         <div className="image-info-item__icon-wrapper">
-          <img
-            className="image-info-item__icon"
-            src={item.fields.image.fields.file.url}
-            alt=""
-          />
+          <img className="image-info-item__icon" src={item.fields.image.fields.file.url} alt="icon" />
         </div>
         <div className="image-info-item__info-wrapper">
           <h3
