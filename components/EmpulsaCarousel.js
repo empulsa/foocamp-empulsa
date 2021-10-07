@@ -9,6 +9,8 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
 export default function EmpulsaCarousel({
   navigation = false,
   pagination = false,
+  slidesPerViewMobile = 1,
+  spaceBetweenMobile = 1,
   centeredSlides = false,
   autoplay = false,
   spaceBetween = 0,
@@ -21,6 +23,17 @@ export default function EmpulsaCarousel({
   return (
     <Swiper
       speed={800}
+      allowTouchMove
+      breakpoints={{
+        320: {
+          slidesPerView: slidesPerViewMobile,
+          spaceBetween: spaceBetweenMobile,
+        },
+        640: {
+          slidesPerView,
+          spaceBetween,
+        },
+      }}
       slidesPerView={slidesPerView}
       slidesPerGroup={slidesPerGroup}
       centeredSlides={centeredSlides}

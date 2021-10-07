@@ -6,6 +6,7 @@ import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 import FooterSection from '../components/FooterSection';
 import HeroSection from '../components/HeroSection';
+import ContentWithCarouselSection from '../components/ContentWithCarouselSection';
 import ProcessSection from '../components/ProcessSection';
 import ContentWithLogosSection from '../components/ContentWithLogosSection';
 
@@ -29,6 +30,7 @@ export const getStaticProps = async ({ params }) => {
 
 const AvailableComponents = {
   // mainNavbar: Navigation,
+  contentWithCarouselSection: ContentWithCarouselSection,
   heroSection: HeroSection,
   contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
