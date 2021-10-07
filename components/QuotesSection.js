@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import EmpulsaCarousel from './EmpulsaCarousel';
 
 export default function QuotesSection({ fields }) {
   const { quotes } = fields;
@@ -35,7 +36,14 @@ export default function QuotesSection({ fields }) {
     <>
       {getSectionHeadlines()}
       <div className="quotesSection__stories-container">
-        {quotes.map((item) => renderQuoteItem(item))}
+        <EmpulsaCarousel
+          navigation
+          pagination
+          slidesPerViewMobile={1}
+          slidesPerView={3}
+        >
+          {quotes.map((item) => renderQuoteItem(item))}
+        </EmpulsaCarousel>
       </div>
     </>
   );
