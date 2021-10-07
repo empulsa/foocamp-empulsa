@@ -7,6 +7,7 @@ import SectionDivider from '../components/SectionDivider';
 import FooterSection from '../components/FooterSection';
 import HeroSection from '../components/HeroSection';
 import ContentWithCarouselSection from '../components/ContentWithCarouselSection';
+import ProcessSection from '../components/ProcessSection';
 import ContentWithLogosSection from '../components/ContentWithLogosSection';
 
 export const getStaticPaths = async () => {
@@ -33,6 +34,7 @@ const AvailableComponents = {
   heroSection: HeroSection,
   contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
+  processSection: ProcessSection,
   linksWithIconSection: LinksWithIconSection,
   textWithImageAndLinkOnSide: TextWithImageAndLinkOnSide,
   footerSection: FooterSection,
