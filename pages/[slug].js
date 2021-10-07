@@ -1,8 +1,15 @@
 import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
+import LinksWithIconSection from '../components/LinksWithIconSection';
+import TextWithImageAndLinkOnSide from '../components/TextWithImageAndLinkOnSide';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 import NavegationMain from '../components/Navigation';
+import FooterSection from '../components/FooterSection';
+import HeroSection from '../components/HeroSection';
+import ContentWithCarouselSection from '../components/ContentWithCarouselSection';
+import ProcessSection from '../components/ProcessSection';
+import ContentWithLogosSection from '../components/ContentWithLogosSection';
 
 export const getStaticPaths = async () => {
   const paths = await getPages();
@@ -24,7 +31,15 @@ export const getStaticProps = async ({ params }) => {
 
 const AvailableComponents = {
   mainNavbar: NavegationMain,
+  // mainNavbar: Navigation,
+  contentWithCarouselSection: ContentWithCarouselSection,
+  heroSection: HeroSection,
+  contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
+  processSection: ProcessSection,
+  linksWithIconSection: LinksWithIconSection,
+  textWithImageAndLinkOnSide: TextWithImageAndLinkOnSide,
+  footerSection: FooterSection,
 };
 
 export default function Recipes({ components, slug }) {
