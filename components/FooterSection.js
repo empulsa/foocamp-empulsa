@@ -9,13 +9,13 @@ export default function Footer({ fields }) {
     <>
       <div className="triangle-shape" style={style} />
       <div className="footerSection__img-wrapper">
-        <img className="footerSection__icon" src={fields.logoImage.fields.image.fields.file.url} alt="" />
+        <img className="footerSection__icon" src={fields.logoImage.fields.image.fields.file.url} alt="Empulsa-logo" />
       </div>
       <MainCta fields={fields.ctaButton.fields} />
       <div className="footerSection__nav-links-wrapper">
         {fields.navlinks.map((link) => (
-          <Link key={link.sys.id} href={`/${link.fields.linkUrl}`}>
-            <a href={`/${link.fields.linkUrl}`} className="footerSection__link">{link.fields.linkLabel}</a>
+          <Link key={link.sys.id} href={link.fields.linkUrl}>
+            <a target={link.fields.externalLink ? '_blank' : ''} href={link.fields.linkUrl} className="footerSection__link" rel="noreferrer">{link.fields.linkLabel}</a>
           </Link>
         ))}
       </div>
