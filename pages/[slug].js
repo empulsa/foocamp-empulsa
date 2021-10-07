@@ -1,5 +1,7 @@
 import { getPageData, getPages } from '../utils/api';
 import ImageInfoItemsSection from '../components/ImageInfoItemsSection';
+import LinksWithIconSection from '../components/LinksWithIconSection';
+import TextWithImageAndLinkOnSide from '../components/TextWithImageAndLinkOnSide';
 import ComponentNotFound from '../components/ComponentNotFound';
 import SectionDivider from '../components/SectionDivider';
 import FooterSection from '../components/FooterSection';
@@ -31,6 +33,8 @@ const AvailableComponents = {
   contentWithLogosSection: ContentWithLogosSection,
   imageInfoItemsSection: ImageInfoItemsSection,
   processSection: ProcessSection,
+  linksWithIconSection: LinksWithIconSection,
+  textWithImageAndLinkOnSide: TextWithImageAndLinkOnSide,
   footerSection: FooterSection,
 };
 
