@@ -1,0 +1,235 @@
+.mainNavbar {
+  $self: &;
+
+  .layout main & {
+    padding: 14px 0;
+  }
+
+  .section-content {
+    width: 100%;
+  }
+
+  &__wrapper {
+    padding: 0 $gap-md;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__brand {
+    flex-grow: 1;
+
+    @media (min-width: $breakpoint-md) {
+      flex-grow: initial;
+    }
+  }
+
+  &__img {
+    height: 60px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: margin 2s;
+    transition-delay: 0.25s;
+
+    #{$self}__wrapper--mobile-active & {
+      margin-right: 0;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      height: auto;
+    }
+  }
+
+  &__link {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #f5f5f5;
+      color: $orange-primary2;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      font-weight: normal;
+    }
+  }
+
+  &__subLi &__link {
+    width: 100%;
+    min-width: max-content;
+    transition: font-weight 0.1s;
+    font-weight: normal;
+
+    @media (min-width: $breakpoint-md) {
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__arrow::after {
+    @media (min-width: $breakpoint-md) {
+      content: ">";
+      font-weight: 900;
+      margin-left: 20px;
+      margin-top: 2px;
+      transform: rotateZ(90deg);
+      font-family: monospace;
+      transition: transform 0.3s;
+
+      #{$self}__li:hover & {
+        transform: rotateZ(270deg);
+      }
+    }
+  }
+
+  &__ul {
+    position: absolute;
+    height: 0;
+    background: $white;
+    z-index: 1;
+    transition: padding 0.3s;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-md - 1) {
+      #{$self}__wrapper--mobile-active & {
+        height: auto;
+        top: 75px;
+        right: 0;
+        left: 0;
+        padding: 20px 20px 40px;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      position: relative;
+      align-items: center;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &__ul,
+  &__subUl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__subUl {
+    position: absolute;
+    width: fit-content;
+    padding: 10px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    height: 0;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-md - 1) {
+      #{$self}__wrapper--mobile-active & {
+        height: auto;
+        position: relative;
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      height: 0;
+      overflow: hidden;
+    }
+
+    #{$self}__li:hover & {
+      @media (min-width: $breakpoint-md) {
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
+        height: auto;
+        position: absolute;
+      }
+    }
+  }
+
+  &__li {
+    position: relative;
+    margin: 5px 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    #{$self}__wrapper--mobile-active & {
+      opacity: 1;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      opacity: 1;
+    }
+  }
+
+  &__subLi {
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 100%;
+    display: block;
+    min-width: fit-content;
+
+    #{$self}__wrapper--mobile-active & {
+      opacity: 1;
+    }
+
+    #{$self}__li:hover &,
+    #{$self}__li a:active & {
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    height: auto;
+    min-width: auto;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $orange-primary2;
+  }
+
+  &__heart {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: padding 0.25s, height 0.25s, width 0.25s;
+    transition-delay: 0, 0.25s, 0.25s;
+    display: inline-flex;
+
+    .main-cta__text {
+      display: none;
+    }
+
+    .main-cta__icon {
+      margin: 0;
+    }
+    #{$self}__wrapper--mobile-active & {
+      height: 0;
+      width: 0;
+      padding: 0;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
