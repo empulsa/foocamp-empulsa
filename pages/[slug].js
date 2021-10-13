@@ -5,7 +5,7 @@ import TextWithImageAndLinkOnSide from '../components/TextWithImageAndLinkOnSide
 import ComponentNotFound from '../components/ComponentNotFound';
 import QuotesSection from '../components/QuotesSection';
 import SectionDivider from '../components/SectionDivider';
-import NavegationMain from '../components/Navigation';
+import MainNavbar from '../components/MainNavbar';
 import FooterSection from '../components/FooterSection';
 import HeroSection from '../components/HeroSection';
 import ContentWithCarouselSection from '../components/ContentWithCarouselSection';
@@ -31,8 +31,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const AvailableComponents = {
-  mainNavbar: NavegationMain,
-  // mainNavbar: Navigation,
+  mainNavbar: MainNavbar,
   contentWithCarouselSection: ContentWithCarouselSection,
   heroSection: HeroSection,
   contentWithLogosSection: ContentWithLogosSection,
@@ -74,9 +73,7 @@ export default function Recipes({ components, slug }) {
     <main className={slug}>
       {components.map((component) => {
         const componentType = getComponentType(component);
-        /* console.log(component);
-        console.log(componentType);
-        console.log('...........................'); */
+
         if (componentType === 'sectionDivider') {
           return <SectionDivider {...component} key={getComponentId()} />;
         }
