@@ -19,7 +19,7 @@ export default function NavegationMain({ fields }) {
         />
         <div className="mainNavbar__brand">
           <Link href="/">
-            <img className="mainNavbar__img" src={logo.fields.image.fields.file.url} alt={fields.logo.fields.nombre} />
+            <img className="mainNavbar__img" src={logo.fields.image.fields.file.url} alt={logo.fields.nombre} />
           </Link>
         </div>
         <ul className="mainNavbar__ul">
@@ -53,7 +53,7 @@ export default function NavegationMain({ fields }) {
             );
           })}
           <li>
-            <MainCta fields={fields.ctaButton.fields} className="mainNavbar__btn" />
+            <MainCta fields={ctaButton.fields} className="mainNavbar__btn" />
           </li>
         </ul>
         <MainCta fields={ctaButton.fields} className="mainNavbar__btn mainNavbar__heart" />
