@@ -25,7 +25,7 @@ export default function NavegationMain({ fields }) {
         <ul className="mainNavbar__ul">
           {navItems.map((navItem) => {
             const { linkUrl, linkLabel, subLinks } = navItem.fields;
-            const arrowClass = subLinks ? 'arrow' : '';
+            const arrowClass = subLinks ? 'mainNavbar__arrow' : '';
             return (
               <li className="mainNavbar__li" key={navItem.sys.id}>
                 <Link href={`${linkUrl}`}>
