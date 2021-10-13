@@ -9,6 +9,8 @@
 }
 
 .mainNavbar {
+  $self: &;
+
   .layout main & {
     padding: 14px 0;
   }
@@ -25,20 +27,29 @@
     width: 100%;
   }
 
-  &__burguer {
-    cursor: pointer;
-    font-size: 25px;
-    border-radius: 3px;
-    padding: 4px 6px;
-    margin-right: 17px;
-    line-height: 30px;
-    border: none;
-    background: transparent;
+  &__brand {
+    flex-grow: 1;
+
+    @media (min-width: $breakpoint-md) {
+      flex-grow: initial;
+    }
   }
 
   &__img {
     height: 60px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: margin 2s;
+    transition-delay: 0.25s;
+
+    #{$self}__wrapper--mobile-active & {
+      margin-right: 0;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      height: auto;
+    }
   }
 
   &__link {
@@ -48,13 +59,16 @@
     justify-content: center;
     color: $black;
     text-decoration: none;
-    border-bottom: 1px solid #f5f5f5;
     padding: 10px 20px;
     font-weight: bold;
 
     &:hover {
       background-color: #f5f5f5;
       color: $orange-primary2;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      font-weight: normal;
     }
   }
 
@@ -63,11 +77,40 @@
     min-width: max-content;
     transition: font-weight 0.1s;
     font-weight: normal;
+
+    @media (min-width: $breakpoint-md) {
+      &:hover {
+        font-weight: bold;
+      }
+    }
   }
 
   &__ul {
     position: absolute;
-    display: none;
+    height: 0;
+    background: $white;
+    z-index: 1;
+    overflow: hidden;
+    transition: padding 0.3s;
+
+    @media (max-width: $breakpoint-md - 1) {
+      #{$self}__wrapper--mobile-active & {
+        height: auto;
+        top: 75px;
+        right: 0;
+        left: 0;
+        padding: 20px 20px 40px;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      position: relative;
+      align-items: center;
+      height: auto;
+    }
   }
 
   &__ul,
@@ -84,24 +127,63 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    height: 0;
+    overflow: hidden;
+
+    /* #{$self}__wrapper--mobile-active & {
+      height: auto;
+      position: relative;
+    } */
+
+    @media (min-width: $breakpoint-md) {
+      height: 0;
+      overflow: hidden;
+    }
   }
 
   &__li {
     position: relative;
+    margin: 5px 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    #{$self}__wrapper--mobile-active & {
+      opacity: 1;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      opacity: 1;
+    }
   }
 
   &__subLi {
     opacity: 0;
-    transition: all 0.25s ease-in-out;
+    transition: opacity 0.5s;
     width: 100%;
     display: block;
     min-width: fit-content;
+
+    /* #{$self}__wrapper--mobile-active & {
+      opacity: 1;
+    } */
+  }
+
+  &__li:hover &__subUl {
+    height: auto;
+    position: relative;
+
+    @media (min-width: $breakpoint-md) {
+      background-color: $white;
+      border-radius: 10px;
+      box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
+      height: auto;
+      position: absolute;
+    }
   }
 
   &__li:hover &__subLi,
   &__li a:active &__subLi {
     opacity: 1;
-    transition: all 0.25s ease-in-out;
   }
 
   &__btn {
@@ -126,6 +208,10 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    overflow: hidden;
+    transition: padding 0.25s, height 0.25s, width 0.25s;
+    transition-delay: 0, 0.25s, 0.25s;
+    display: inline-flex;
 
     .main-cta__text {
       display: none;
@@ -134,81 +220,14 @@
     .main-cta__icon {
       margin: 0;
     }
-  }
-}
-
-@media (max-width: $breakpoint-md - 1) {
-  .mainNavbar {
-    &__wrapper--mobile-active &__ul {
-      top: 75px;
-      right: 0;
-      left: 0;
-      padding: 10px;
-      text-align: center;
-      display: block;
-    }
-
-    &__wrapper--mobile-active &__subUl {
-      height: auto;
-      position: relative;
-      opacity: 1;
-    }
-
-    &__wrapper--mobile-active &__subLi {
-      opacity: 1;
-    }
-
-    &__wrapper--mobile-active &__heart {
-      display: none;
-    }
-
-    .arrow {
-      font-weight: bold;
-    }
-  }
-}
-
-@media (min-width: $breakpoint-md) {
-  .mainNavbar {
-    &__burguer {
-      display: none;
-    }
-
-    &__img {
-      height: auto;
-    }
-
-    &__ul {
-      display: flex;
-      position: relative;
-    }
-
-    &__subUl {
+    #{$self}__wrapper--mobile-active & {
       height: 0;
-      overflow: hidden;
+      width: 0;
+      padding: 0;
     }
 
-    &__li:hover &__subUl {
-      background-color: $white;
-      border-radius: 10px;
-      -webkit-box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      height: auto;
-    }
-
-    &__heart {
+    @media (min-width: $breakpoint-md) {
       display: none;
-    }
-
-    &__link {
-      font-weight: normal;
-    }
-
-    &__subLi &__link {
-      &:hover {
-        font-weight: bold;
-      }
     }
   }
 }
