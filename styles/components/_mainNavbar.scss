@@ -76,16 +76,18 @@
   }
 
   &__arrow::after {
-    content: ">";
-    font-weight: 900;
-    margin-left: 20px;
-    margin-top: 2px;
-    transform: rotateZ(90deg);
-    font-family: monospace;
-    transition: transform 0.3s;
+    @media (min-width: $breakpoint-md) {
+      content: ">";
+      font-weight: 900;
+      margin-left: 20px;
+      margin-top: 2px;
+      transform: rotateZ(90deg);
+      font-family: monospace;
+      transition: transform 0.3s;
 
-    #{$self}__li:hover & {
-      transform: rotateZ(270deg);
+      #{$self}__li:hover & {
+        transform: rotateZ(270deg);
+      }
     }
   }
 
