@@ -63,8 +63,9 @@ export default function Recipes({ components, slug }) {
     if (Object.prototype.hasOwnProperty.call(fields, 'sectionBackgroundColor')) {
       styles['--sectionBackgroundColor'] = fields.sectionBackgroundColor;
     }
-    if (Object.prototype.hasOwnProperty.call(fields, 'textColor')) {
-      styles['--textColor'] = fields.textColor;
+    if (Object.prototype.hasOwnProperty.call(fields, 'whiteText')
+      && fields.whiteText) {
+      styles['--textColor'] = '#FFF';
     }
     return styles;
   };

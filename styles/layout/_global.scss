@@ -5,4 +5,8 @@
 section {
   background-color: var(--sectionBackgroundColor);
   color: var(--textColor);
+
+  a {
+    color: var(--textColor);
+  }
 }
